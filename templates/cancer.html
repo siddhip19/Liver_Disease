@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <h1 class="navbar-brand text-dark">Liver Disease Detection</h1>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:5000/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5000/liver">Liver Disease Prediction</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <form
+      action="http://127.0.0.1:5000/liver"
+      method="POST"
+      class="container mt-4"
+      enctype="multiport/form-data"
+    >
+    <div class="formclass">
+      <div class="row">
+        <div class="col-md-4">
+          <label>Age</label>
+          <input type="text" name="age" class="form-control"/><br />
+          <label>Sex (1:Male, 2:Female)</label>
+          <input type="text" name="sex" class="form-control"/><br />
+          <label>Total_Bilirubin</label>
+          <input type="text" name="chest"class="form-control" placeholder="Total bilirubin: 0.4-75."required /><br />
+          <label>Direct_Bilirubin</label>
+          <input type="text" name="trestbps" class="form-control" placeholder="Enter a value between range 0.1-19.7"required/><br />
+        </div>
+        <div class="col-md-4">
+          <label>Alkaline_Phosphotase</label>
+          <input type="text" name="chol" class="form-control"  placeholder="Enter a value between range 63-2110" required/><br />
+          <label>Alamine_Aminotransferase</label>
+          <input type="text" name="fbs"class="form-control" placeholder="Enter a value between range 10-2000" required /><br />
+          <label>Aspartate_Aminotransferase</label>
+          <input type="text" name="restecg" class="form-control"   placeholder="Enter a value between range 10-4929" required/><br />
+        </div>
+        <div class="col-md-4">
+        <label>Total_Proteins</label>
+        <input type="text" name="thalach" class="form-control" placeholder="Enter a value between range 2.7 - 9.6" required/><br />
+        <label>Albumin</label>
+        <input type="text" name="exang" class="form-control" placeholder="Enter a value between range 0.9-5.5" required/><br />
+        <label>Albumin_and_Globulin_Ratio</label>
+        <input type="text" name="oldpeak" class="form-control" placeholder="Enter a value between range 0.3 - 2.8" required/><br />
+        </div>
+      </div>
+      
+        
+
+        
+
+        <input type="submit" class="btn btn-primary"/>
+    </div>
+    </form>
+    </body>
+    <section class="footer container mt-5 pt-5">
+      
+      </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

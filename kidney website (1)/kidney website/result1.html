@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8" />
+    <title>Health Diagnosis ML</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+   
+   
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@500&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+
+
+    <style>
+        body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.title{
+    background-color: #ff8f8f;;
+    padding: 2%;
+    
+}
+
+.heartimage{
+    width: 400px;
+}
+
+.logo{
+    width: auto;
+    height: auto;
+    margin-left: 100px;
+   
+    position: absolute;
+   
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    font-weight: bolder;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+h3{
+    font-size:1.5rem;
+    font-weight: bold;
+}
+
+.container-fluid{
+    padding: 25px;
+}
+
+.navbar{
+    padding: 0 0 4.5rem;
+
+}
+.navbar-brand{
+    font-family: 'Kodchasan', sans-serif;
+
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+
+.nav-item{
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+}
+
+.odr-btn{
+    margin-top: 5%;
+}
+
+#features{
+    padding: 7% 15%;
+    
+}
+
+.feat-box{
+    text-align: center;
+}
+
+
+.feat-icon{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 25px;
+}
+
+
+
+
+p{
+    color: rgb(70, 69, 69);
+}
+
+#testimonials{
+    background-color: #ff8f8f;
+    padding: 5% 15%;
+    text-align: center;
+}
+
+.test_img{
+    width: 15%;
+    border-radius: 100%;
+    margin: 20px;
+    padding-bottom: 0;
+
+}
+
+
+#pricing{
+    padding: 100px;
+    text-align: center;
+}
+
+.pri-col{
+    padding: 3% 2%;
+}
+
+
+#footer{
+    background-color: wheat;
+    padding: 25px;
+    text-align: center;
+}
+
+.icons img{
+    width: 40px;
+    margin: 10px 20px;
+    border: 0;
+}
+
+
+
+
+
+@media (max-width :900px )
+{
+
+    .logo{
+        height: 200px;
+        
+        transform: rotate(0);
+        position: static;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    h1{
+     font-size: 2.5rem;
+     text-align: left;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+
+}
+    </style>
+    <meta charset="utf-8" />
+    <title>Heart Disease Detection Website</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+  </head>
+  <body>
+    <header>
+      
+      <section class="title">
+      <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="">Result Page</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="frontpage.html"> Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5000/liver">Liver Disease Prediction</a>
+            </li>
+            
+        </ul>
+
+     </div>
+    </nav>
+    </div>
+</section>
+
+    </header>
+    <div class="resultclass">{{resultvalue}}</div>
+    <section id="footer">
+     
+      <div class="icons">
+        <a href="https://facebook.com/"><img src="facebook.png" alt=""></a>
+        <a href="https://twitter.com/"><img src="twitter.png" alt=""></a>
+        <a href="https://www.linkedin.com/"><img src="linkedin.png" alt=""></a>
+      </div>
+    </section>
+  </body>
+</html>
